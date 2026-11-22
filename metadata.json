@@ -1,0 +1,6 @@
+{
+  "name": "GAMIFY — Nurdan Teacher",
+  "description": "Azərbaycanlı Abituriyent (DİM) və Aptis ESOL öyrənənləri üçün oyunlaşdırılmış ingilis dili qrammatika platforması.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

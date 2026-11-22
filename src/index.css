@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-surface: #f7f9fb;
+  --color-surface-dim: #d8dadc;
+  --color-surface-lowest: #ffffff;
+  --color-surface-low: #f2f4f6;
+  --color-surface-container: #eceef0;
+  --color-surface-high: #e6e8ea;
+  --color-surface-highest: #e0e3e5;
+
+  --color-on-surface: #191c1e;
+  --color-on-surface-variant: #464553;
+  --color-outline: #777584;
+  --color-outline-variant: #c8c4d5;
+
+  --color-primary: #1f108e;
+  --color-primary-container: #3730a3;
+  --color-primary-fixed: #e2dfff;
+  --color-primary-fixed-dim: #c3c0ff;
+
+  --color-secondary: #712ae2;
+  --color-secondary-container: #8a4cfc;
+  --color-secondary-fixed: #eaddff;
+  --color-secondary-fixed-dim: #d2bbff;
+
+  --color-tertiary: #003421;
+  --color-tertiary-container: #004d33;
+  --color-tertiary-emerald: #2dc68d;
+  --color-tertiary-fixed: #6ffbbe;
+  --color-tertiary-fixed-dim: #4edea3;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+}
+
+@layer base {
+  html,
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.tactile-btn-primary {
+  box-shadow: 0 4px 0 0 #0f0069;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+}
+.tactile-btn-primary:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 0 #0f0069;
+}
+
+.tactile-btn-secondary {
+  box-shadow: 0 4px 0 0 #4c11a8;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+}
+.tactile-btn-secondary:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 0 #4c11a8;
+}
+
+.tactile-btn-emerald {
+  box-shadow: 0 4px 0 0 #003421;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+}
+.tactile-btn-emerald:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 0 #003421;
+}
+
+.tactile-btn-neutral {
+  box-shadow: 0 3px 0 0 #d8dadc;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+}
+.tactile-btn-neutral:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 0 #d8dadc;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+.animate-shake {
+  animation: shake 0.35s ease-in-out;
+}
